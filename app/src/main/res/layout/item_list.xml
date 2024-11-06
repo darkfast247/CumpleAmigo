@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Imagen de perfil -->
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:contentDescription="Profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#CCCCCC" />
+
+    <!-- Texto principal -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Two line item"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Texto secundario -->
+    <TextView
+        android:id="@+id/tv_secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Secondary text"
+        android:textSize="14sp"
+        android:textColor="#808080"
+        app:layout_constraintTop_toBottomOf="@id/tv_primary"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Flecha a la derecha -->
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_media_next"
+        android:contentDescription="Arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#7BC3AE" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
