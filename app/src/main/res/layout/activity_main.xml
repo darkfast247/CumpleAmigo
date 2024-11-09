@@ -9,46 +9,45 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <!-- Título de la pantalla -->
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CUMPLEAÑEROS"
-        android:textSize="24sp"
-        android:textColor="#7BC3AE"
+        android:layout_width="262dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/cumplea_eros"
+        android:textColor="#51AA99"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        android:layout_marginTop="16dp"/>
-
-
-
-    <!-- Floating Action Button para agregar un nuevo elemento -->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="412dp"
-        android:layout_height="587dp"
+        android:layout_width="396dp"
+        android:layout_height="476dp"
         app:layout_constraintBottom_toTopOf="@+id/fab_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         tools:listitem="@layout/item_list" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/add"
+        android:scaleType="fitCenter"
         android:src="@android:drawable/ic_input_add"
         android:tint="#FFFFFF"
-        android:contentDescription="Add"
+        app:backgroundTint="#51AA99"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"
-        app:backgroundTint="#7BC3AE"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
