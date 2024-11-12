@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Encabezado de la aplicación -->
+    <TextView
+        android:id="@+id/Encabezado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:textColor="#4CAF50"/>
+
+    <!-- Imagen de perfil -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_person"
+        android:contentDescription="Profile Image"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo de texto para el nombre -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingresar1"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:backgroundTint="#4CAF50"/>
+
+    <!-- Campo de texto para las redes sociales -->
+    <EditText
+        android:id="@+id/etSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingresar2"
+        android:inputType="textUri"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"/>
+
+    <!-- Campo de texto para la fecha -->
+    <EditText
+        android:id="@+id/Fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingresar3"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    <!-- Botón de agregar -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"
+        android:text="AGREGAR"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
