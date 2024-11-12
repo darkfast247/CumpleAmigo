@@ -1,6 +1,8 @@
 package com.example.relojdevida
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -13,6 +15,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        // CODIGO PARA LA OTRA PANTALLA NO TOCAR
+        val btn : com.google.android.material.floatingactionbutton.FloatingActionButton  = findViewById(R.id.fab_add)
+        btn.setOnClickListener {
+            val  intent : Intent = Intent(this, agregar_cumple :: class.java)
+            startActivity(intent)
+        }
+
+        
 
 
         val mainLayout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.main)
