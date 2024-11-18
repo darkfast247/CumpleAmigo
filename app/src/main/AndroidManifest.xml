@@ -21,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity"
             android:exported="true">
 
@@ -29,6 +30,15 @@
         <activity android:name=".agregar_cumple"
             android:exported="true">
         </activity>
+
+        <activity android:name=".EnviarMensajeActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".MyAdapter"
+            android:exported="true">
+        </activity>
+
 
     </application>
 
