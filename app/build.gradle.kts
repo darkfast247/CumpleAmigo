@@ -15,6 +15,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Incluir la clave de API en BuildConfig
+        buildConfigField("String", "apiKey", "\"${project.findProperty("apiKey") ?: ""}\"")
     }
 
     buildTypes {
@@ -26,20 +29,23 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true  // Habilitar el uso de BuildConfig customizado
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    buildFeatures{
-        viewBinding = true
-    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,11 +55,12 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.lottie)
+    // Dependencias necesarias para Retrofit y OkHttp
+    implementation(libs.retrofit)
+    implementation(libs.retrofitConverterGson)
+    implementation(libs.okhttp)
 
-
-
-
-
-
-
+    // Dependencia para Gson
+    implementation(libs.gson)
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
 }
