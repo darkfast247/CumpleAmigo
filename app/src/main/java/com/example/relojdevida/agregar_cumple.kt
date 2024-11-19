@@ -1,5 +1,6 @@
 package com.example.relojdevida
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -13,6 +14,7 @@ class agregar_cumple : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.agregar_cumple)
 
+
         // Referencias a los campos de texto y el botón
         val etName = findViewById<EditText>(R.id.etName)
         val etSocial = findViewById<EditText>(R.id.etSocial)
@@ -24,11 +26,17 @@ class agregar_cumple : AppCompatActivity() {
             showDatePickerDialog(etDate)
         }
 
-        // Acción del botón "Agregar"
+        // Acción del botón "Agregar" para el Myadapter
         btnAdd.setOnClickListener {
             val name = etName.text.toString()
             val socialLink = etSocial.text.toString()
             val birthDate = etDate.text.toString()
+            val intent = Intent(this, MainActivity::class.java)
+
+            intent.putExtra("nombre", name)
+            intent.putExtra("redesSociales", socialLink)
+            intent.putExtra("fecha", birthDate)
+            startActivity(intent)
 
             if (name.isNotEmpty() && socialLink.isNotEmpty() && birthDate.isNotEmpty()) {
                 Toast.makeText(this, "Cumpleaños agregado", Toast.LENGTH_SHORT).show()
@@ -51,6 +59,8 @@ class agregar_cumple : AppCompatActivity() {
         }, year, month, day)
 
         datePickerDialog.show()
+
+
     }
 }
 

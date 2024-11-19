@@ -2,14 +2,13 @@ package com.example.relojdevida
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.widget.ImageButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +24,6 @@ class MainActivity : AppCompatActivity() {
             val  intent : Intent = Intent(this, agregar_cumple :: class.java)
             startActivity(intent)
         }
-
 
 
         val mainLayout = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.main)
