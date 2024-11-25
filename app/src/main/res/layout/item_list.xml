@@ -10,42 +10,30 @@
     <!-- Imagen de perfil -->
     <ImageView
         android:id="@+id/iv_profile"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@android:drawable/ic_menu_myplaces"
+        android:layout_width="64dp"
+        android:layout_height="63dp"
         android:contentDescription="Profile"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_person"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:tint="#CCCCCC" />
 
-    <!-- Texto principal -->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:text="Two line item"
-        android:textSize="16sp"
         android:textColor="#000000"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        android:layout_marginStart="8dp"/>
-
-    <!-- Texto secundario -->
-    <TextView
-        android:id="@+id/tv_secondary"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Secondary text"
-        android:textSize="14sp"
-        android:textColor="#808080"
-        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/iv_profile"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        android:layout_marginStart="8dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Flecha a la derecha -->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="52dp"

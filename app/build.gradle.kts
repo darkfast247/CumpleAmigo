@@ -14,6 +14,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Incluir la clave de API en BuildConfig
@@ -36,12 +37,17 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+    packagingOptions {
+        // Excluir archivos duplicados
+        resources.excludes += "META-INF/native-image/org.mongodb/bson/native-image.properties"
     }
 }
 
@@ -60,7 +66,28 @@ dependencies {
     implementation(libs.retrofitConverterGson)
     implementation(libs.okhttp)
 
-    // Dependencia para Gson
     implementation(libs.gson)
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
+    implementation ("io.realm:realm-android-library:10.10.0") // Última versión de MongoDB Realm
+
+    implementation ("com.android.tools:desugar_jdk_libs:1.1.5")
+    coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("org.mongodb:mongodb-driver-kotlin-coroutine:4.10.1")
+    implementation("org.slf4j:slf4j-simple:1.7.9")
+
+    implementation ("com.google.code.gson:gson:2.8.9")
+
+
+
+
+
+
+
+
+
 }

@@ -13,8 +13,6 @@ import android.util.Log
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlinx.coroutines.*
-
-// Agrega la importación para la API de Gemini
 import com.google.ai.client.generativeai.GenerativeModel
 
 class EnviarMensajeActivity : AppCompatActivity() {
@@ -32,6 +30,8 @@ class EnviarMensajeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mensaje)
 
+
+
         // Vínculo de vistas
         ivProfilePicture = findViewById(R.id.iv_profile_picture)
         tvUserName = findViewById(R.id.tv_user_name)
@@ -42,7 +42,14 @@ class EnviarMensajeActivity : AppCompatActivity() {
         scrollEvents = findViewById(R.id.scroll_events)
 
         ivProfilePicture.setImageResource(R.drawable.ic_person)
-        tvUserName.text = "Nombre de Usuario"
+
+        // Recuperar los datos del Intent
+        val userName = intent.getStringExtra("USER_NAME")
+        val socialLink = intent.getStringExtra("SOCIAL_LINK")
+
+        // Mostrar los datos en los TextViews
+        tvUserName.text = userName ?: "Nombre no disponible"
+
 
         // Configuración de los botones de Instagram y Facebook
         btnInstagram.setOnClickListener {

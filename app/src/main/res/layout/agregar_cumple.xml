@@ -8,24 +8,25 @@
     android:gravity="center_horizontal">
 
     <!-- Encabezado de la aplicación -->
-    <TextView
-        android:id="@+id/Encabezado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/agregar"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:paddingBottom="16dp"
-        android:textColor="#51AA99"/>
 
     <!-- Imagen de perfil -->
+    <TextView
+        android:id="@+id/Encabezado"
+        android:layout_width="285dp"
+        android:layout_height="58dp"
+        android:paddingBottom="16dp"
+        android:text="@string/agregar"
+        android:textColor="#51AA99"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/profileImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_person"
+        android:layout_width="106dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="Profile Image"
-        android:layout_marginBottom="16dp" />
+        android:src="@drawable/ic_person" />
 
     <!-- Campo de texto para el nombre -->
     <EditText
